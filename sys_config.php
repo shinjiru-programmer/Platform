@@ -1,11 +1,13 @@
 <?php
+$dbHost = "localhost";
+$dbName = "platform";
+$dbUser = "root";
+$dbPass = "";
 
-$username = $mysqli -> real_escape_string($_REQUEST['username']);
-$password = $mysqli -> real_escape_string($_REQUEST['password']);
+$link = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 
-if ($username == 'one' and $password == 'two') {
-    header('Location: index2.php');
-} else {
-    header('Location: index.php');
+if ($link -> connect_error) {
+    die("Connection failed: " . $link -> connect_error);
 }
 
+//echo "Connected successfully";

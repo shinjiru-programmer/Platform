@@ -2,7 +2,7 @@
 $dbHost = "localhost";
 $dbName = "platform";
 $dbUser = "root";
-$dbPass = "0sampai9!";
+$dbPass = "";
 
 $link = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 
